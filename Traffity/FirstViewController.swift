@@ -14,7 +14,18 @@ class FirstViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-
+    
+    @IBOutlet weak var accelYTag: UILabel!
+    @IBOutlet weak var EventOccuringLabel: UILabel!
+    
+    var processor = AcclerationProcessor()
+    @IBAction func StateChange(_ sender: UISwitch) {
+        if (sender.isOn == true){
+            processor.startAccelerometer(yLabel: accelYTag, eventLabel: EventOccuringLabel)
+        } else {
+            processor.stopAccelerometer()
+        }
+    }
+    
 }
 
