@@ -8,7 +8,15 @@
 
 import UIKit
 
-class MealTableViewCell: UITableViewCell {
+class TripTableViewCell: UITableViewCell {
+    
+    //MARK: Properties
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var ratingLabel: UILabel!
+    @IBOutlet weak var distanceLabel: UILabel!
+    @IBOutlet weak var harshAccelLabel: UILabel!
+    @IBOutlet weak var harshBrakeLabel: UILabel!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()

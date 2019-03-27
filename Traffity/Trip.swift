@@ -37,13 +37,11 @@ class Trip: NSObject, NSCoding {
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
-        guard !date != nil else {
-            return nil
-        }
+        let date = aDecoder.decodeObject(forKey: PropertyKey.date)
         let harshBrakes = aDecoder.decodeInteger(forKey: PropertyKey.harshBrakes)
         let harshAccel = aDecoder.decodeInteger(forKey: PropertyKey.harshAccel)
         let score = aDecoder.decodeInteger(forKey: PropertyKey.score)
-        self.init(date: date, harshBrakes: harshBrakes, harshAccel: harshAccel, score: score)
+        self.init(date: date as! Date, harshBrakes: harshBrakes, harshAccel: harshAccel, score: score)
     }
     
     //MARK: Types

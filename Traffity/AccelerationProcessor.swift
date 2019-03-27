@@ -14,15 +14,19 @@ class AcclerationProcessor {
     //CMMotionManager object
     let motion = CMMotionManager()
     
+    //Instance of TableViewController
+    let TripTableViewControllerInstance = TripTableViewController()
+    
     //Define arrays that will store 10s buffer
     var accelYArray = Array(repeating: 0.0, count: 500)
     var filterPointY = 0.0
     var accelEventOccuring = false
     var brakeEventOccuring = false
 
+    var trip = Trip(date: Date(), harshBrakes: 0, harshAccel: 0, score: 100)
     func startAccelerometer (yLabel: UILabel, eventLabel: UILabel) {
         //Create instance of Trip
-        var trip = Trip(date: Date(), harshBrakes: 0, harshAccel: 0, score: 100)
+        trip = Trip(date: Date(), harshBrakes: 0, harshAccel: 0, score: 100)
         
         motion.accelerometerUpdateInterval = 0.02 //50Hz
         motion.startAccelerometerUpdates(to: OperationQueue.current!, withHandler: {
@@ -43,7 +47,7 @@ class AcclerationProcessor {
                 if (self.accelEventOccuring == true) {
                     if (self.filterPointY <= 0.5) {
                         //log event
-                        trip!.harshAccel = trip!.harshAccel
+                        self.trip!.harshAccel = self.trip!.harshAccel
                         self.accelEventOccuring = false
                         eventLabel.text = "--"
                     }
@@ -55,7 +59,7 @@ class AcclerationProcessor {
                 if (self.brakeEventOccuring == true) {
                     if (self.filterPointY >= -0.5) {
                         //log event
-                        trip!.harshBrakes = trip!.harshBrakes
+                        self.trip!.harshBrakes = self.trip!.harshBrakes
                         self.brakeEventOccuring = false
                         eventLabel.text = "--"
                     }
@@ -72,9 +76,6 @@ class AcclerationProcessor {
         motion.stopAccelerometerUpdates()
         //STOP ACCELEROMETER CODE
         //save trip to permanent memory
-        //let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(trips, toFile: Trip.ArchiveURL.path)
-    }
-    func loadTrips() -> [Trip]? {
-        return NSKeyedUnarchiver.unarchiveObject(withFile: Trip.ArchiveURL.path) as? [Trip]
+        TripTableViewControllerInstance.saveTrips(trip: self.trip!)
     }
 }
