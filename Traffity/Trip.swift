@@ -14,7 +14,7 @@ class Trip: NSObject, NSCoding {
     init?(date: Date, harshBrakes: Int, harshAccel: Int, score: Int) {
         
         // Initialize stored properties.
-        self.date = Date()
+        self.date = date
         self.harshBrakes = harshBrakes
         self.harshAccel = harshAccel
         self.score = score

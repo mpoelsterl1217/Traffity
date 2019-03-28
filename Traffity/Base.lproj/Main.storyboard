@@ -58,7 +58,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
+            <point key="canvasLocation" x="1142" y="-566"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
@@ -81,7 +81,7 @@
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="BTNPressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="nZD-t1-rDy"/>
-                                    <segue destination="Vyl-JT-gFf" kind="show" id="5pw-eu-OPu"/>
+                                    <segue destination="PTQ-l1-Cg2" kind="show" id="5pw-eu-OPu"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rl0-kQ-H8i">
@@ -124,7 +124,7 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
-        <!--Trip Table View Controller-->
+        <!--Your Trips-->
         <scene sceneID="2TA-AG-sAh">
             <objects>
                 <tableViewController id="Vyl-JT-gFf" customClass="TripTableViewController" customModule="Traffity" customModuleProvider="target" sceneMemberID="viewController">
@@ -133,43 +133,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TripTableViewCell" rowHeight="150" id="Cxa-sm-bOe" customClass="TripTableViewCell" customModule="Traffity" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="150"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TripTableViewCell" rowHeight="110" id="Cxa-sm-bOe" customClass="TripTableViewCell" customModule="Traffity" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="110"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Cxa-sm-bOe" id="TQ1-JS-rDb" customClass="DriveRatingControl" customModule="Traffity" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Cxa-sm-bOe" id="TQ1-JS-rDb">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="109.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fnm-iq-7yg">
-                                            <rect key="frame" x="15" y="11" width="255" height="35"/>
+                                            <rect key="frame" x="16" y="11" width="250" height="40"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAO-gk-Por">
-                                            <rect key="frame" x="278" y="11" width="82" height="68"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Dy-fe-waH">
-                                            <rect key="frame" x="15" y="54" width="85" height="20"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f0P-0k-lf0">
-                                            <rect key="frame" x="108" y="53" width="85" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAO-gk-Por">
+                                            <rect key="frame" x="274" y="10" width="85" height="85"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qz-Lw-fgt">
-                                            <rect key="frame" x="201" y="53" width="69" height="22"/>
+                                            <rect key="frame" x="141" y="74" width="125" height="25"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qVV-jb-RAp" userLabel="Harsh Accel Label">
+                                            <rect key="frame" x="16" y="74" width="125" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -180,13 +173,12 @@
                                 <connections>
                                     <outlet property="DateLabel" destination="Fnm-iq-7yg" id="co3-Ku-qfR"/>
                                     <outlet property="RatingLabel" destination="gAO-gk-Por" id="t2a-aN-oSU"/>
-                                    <outlet property="distanceLabel" destination="8Dy-fe-waH" id="HLi-tT-HsB"/>
-                                    <outlet property="harshAccelLabel" destination="f0P-0k-lf0" id="hGJ-Xw-VpT"/>
+                                    <outlet property="harshAccelLabel" destination="qVV-jb-RAp" id="A8N-js-tfh"/>
                                     <outlet property="harshBrakeLabel" destination="8qz-Lw-fgt" id="a3m-NW-23m"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="dP3-oI-XXd">
-                                <rect key="frame" x="0.0" y="178" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="138" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dP3-oI-XXd" id="rXD-Pc-89t">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -202,14 +194,42 @@
                             <outlet property="delegate" destination="Vyl-JT-gFf" id="KR2-gT-xdN"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Your Trips" id="YYZ-lg-PSu">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Imo-Sw-mdO">
+                            <connections>
+                                <segue destination="8rJ-Kc-sve" kind="show" id="Gq6-0y-c7W"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="id7-md-PeX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1647" y="44"/>
+            <point key="canvasLocation" x="2750" y="52"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uZk-bA-eMp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PTQ-l1-Cg2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VAN-5G-jus">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Vyl-JT-gFf" kind="relationship" relationship="rootViewController" id="UTh-Li-2oS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K68-13-vHW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1654" y="621"/>
         </scene>
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Gq6-0y-c7W"/>
+    </inferredMetricsTieBreakers>
 </document>

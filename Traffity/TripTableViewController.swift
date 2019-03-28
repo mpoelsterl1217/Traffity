@@ -45,7 +45,7 @@ class TripTableViewController: UITableViewController {
         }
         // Configure the cell...
         let trip = trips[indexPath.row]
-        cell.dateLabel.text = "\(Calendar.current.component(.weekday, from: trip.date))" + " " +  "\(Calendar.current.component(.month, from: trip.date))" + "\(Calendar.current.component(.day, from: trip.date))"
+        cell.dateLabel.text = "\(Calendar.current.component(.day, from: trip.date))" + " " +  "\(Calendar.current.component(.month, from: trip.date))" + " \(Calendar.current.component(.day, from: trip.date))" + " \(Calendar.current.component(.hour, from: trip.date))" + ":\(Calendar.current.component(.minute, from: trip.date))"
         cell.ratingLabel.text = String(trip.score)
         cell.harshAccelLabel.text = String(trip.harshAccel)
         cell.harshBrakeLabel.text = String(trip.harshBrakes)
