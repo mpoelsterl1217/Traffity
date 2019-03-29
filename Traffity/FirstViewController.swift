@@ -13,8 +13,10 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        instructionLabel.text = "When you start a drive: \n -Place your phone with the screen up \n -Face the top of your phone to the front of your car \n - Buckle your seat belt and get driving"
     }
     
+    @IBOutlet weak var instructionLabel: UILabel!
     @IBOutlet weak var accelYTag: UILabel!
     @IBOutlet weak var EventOccuringLabel: UILabel!
     
