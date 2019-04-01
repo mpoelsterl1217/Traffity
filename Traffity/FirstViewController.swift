@@ -21,12 +21,11 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var EventOccuringLabel: UILabel!
     
     var processor = AcclerationProcessor()
-    @IBAction func StateChange(_ sender: UISwitch) {
-        if (sender.isOn == true){
-            processor.startAccelerometer(yLabel: accelYTag, eventLabel: EventOccuringLabel)
-        } else {
-            processor.stopAccelerometer()
-        }
+    @IBAction func startTrip(_ sender: UIButton) {
+        processor.startAccelerometer(yLabel: accelYTag, eventLabel: EventOccuringLabel)
+    }
+    @IBAction func endTrip(_ sender: UIButton) {
+        processor.stopAccelerometer()
     }
     
 }

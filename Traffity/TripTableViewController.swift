@@ -49,7 +49,7 @@ class TripTableViewController: UITableViewController {
         let trip = trips[indexPath.row]
         let f = DateFormatter()
         f.locale = Locale(identifier: "en_US")
-        cell.dateLabel.text = f.string(from: trip.date) /*+ " \(Calendar.current.component(.hour, from: trip.date))" + ":\(Calendar.current.component(.minute, from: trip.date))"*/
+        cell.dateLabel.text = f.string(from: trip.date)
         cell.ratingLabel.text = String(trip.score)
         cell.harshAccelLabel.text = "foo"/*String(trip.harshAccel)*/
         cell.harshBrakeLabel.text = "bar"/*String(trip.harshBrakes)*/
