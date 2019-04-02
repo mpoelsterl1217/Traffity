@@ -48,11 +48,12 @@ class TripTableViewController: UITableViewController {
         // Configure the cell...
         let trip = trips[indexPath.row]
         let f = DateFormatter()
+        f.formatterBehavior = .behavior10_4
         f.locale = Locale(identifier: "en_US")
         cell.dateLabel.text = f.string(from: trip.date)
         cell.ratingLabel.text = String(trip.score)
-        cell.harshAccelLabel.text = "foo"/*String(trip.harshAccel)*/
-        cell.harshBrakeLabel.text = "bar"/*String(trip.harshBrakes)*/
+        cell.harshAccelLabel.text = String(trip.harshAccel)
+        cell.harshBrakeLabel.text = String(trip.harshBrakes)
         
         return cell
     }
